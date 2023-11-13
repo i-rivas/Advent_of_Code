@@ -46,6 +46,18 @@ if count:
     elves[x] = count
 
 
-print(sorted(elves.values(),reverse=True))
+elves_reversed = sorted(elves.values(),reverse=True)
+
+top_3 = 0
+second_count = 0
+
+for x in elves_reversed:
+    if second_count < 3:
+        print (x)
+        top_3 += x
+        second_count += 1
+
+print (top_3)
+
 
         
